@@ -1,0 +1,9 @@
+face_recognition_models
+Click>=6.0
+Cmake
+dlib>=19.3.0
+numpy
+Pillow
+flask
+flask_cors
+scipy>=0.17.0

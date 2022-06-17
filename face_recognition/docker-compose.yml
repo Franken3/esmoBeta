@@ -1,0 +1,18 @@
+version: '2.3'
+
+services:
+  face_recognition:
+    ports:
+      - "5080:8080"
+    image: esmo_face
+    container_name: esmoFace
+    working_dir: /face_recognition
+    build:
+      context: .
+      #Uncomment this line to run the example on the GPU (requires Nvidia-Docker)
+      # dockerfile: Dockerfile.gpu
+    command: make run
+    volumes:
+      - ./:/face_recognition
+    #Uncomment this line to run the example on the GPU (requires Nvidia-Docker)
+    # runtime: nvidia
